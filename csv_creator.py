@@ -2,7 +2,7 @@ import csv
 import io 
 dict1=dict()
 ##code to get the dict
-with io.open('subs.txt','r',encoding="utf-8") as f:
+with io.open('fname','r',encoding="utf-8") as f:
     for line in f:
         splits = line.split()
         for word in splits:
