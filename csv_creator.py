@@ -1,7 +1,7 @@
 import csv
 import io 
 dict1=dict()
-##code to get the dict
+##count and make a dict from the subs txt file
 with io.open('fname','r',encoding="utf-8") as f:
     for line in f:
         splits = line.split()
@@ -12,8 +12,7 @@ with io.open('fname','r',encoding="utf-8") as f:
             else:
                 dict1[word]=1    
 f.close()
-#print(dict1)
-
+#writes to the csv file
 with io.open('output.csv', 'w',encoding="utf-8") as output:
     writer = csv.writer(output)
     for key, value in dict1.items():
